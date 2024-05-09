@@ -1,0 +1,22 @@
+== GUI
+
+--
+The GUI library is used to manage everything that is shown on screen.
+--
+
+NOTE: Don't forget to use the `xxx` permission.
+
+[.function]
+.gui:setWindow(window)
+--
+Set the active window.
+--
+
+[.method]
+.gui:element()
+--
+Creates a new element.
+--
+
+include::gui.window.adoc[]
+include::gui.canvas.adoc[]

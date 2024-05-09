@@ -1,0 +1,24 @@
+=== gui.canvas
+
+--
+Canvas is used for directly access C++ draw functions from the graphical library.
+Its main use is for graphics intensive applications like games.
+--
+
+[.function]
+.gui:window()
+--
+Create a new window.
+--
+
+[.function]
+.gui:window()
+--
+Create a new window.
+--
+
+[.function]
+.gui:window()
+--
+Create a new window.
+--

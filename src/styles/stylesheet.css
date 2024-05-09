@@ -1,0 +1,236 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
+/*@import "https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css";*/
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+    --function-color: #229f24;
+    --method-color: #4981ca;
+}
+
+body {
+    background: #151515;
+    color: #eaeaea;
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 100;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #1d1f22;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 100;
+
+    .title {
+        font-size: 20px;
+    }
+}
+
+#content {
+    margin-top: 100px;
+    margin-left: 320px;
+    padding-left: 40px;
+    padding-right: 80px;
+}
+
+#toc {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 300px;
+    height: calc(100% - 50px);
+    padding: 10px;
+
+    ul {
+        padding: 0;
+
+        ul {
+            padding: 10px;
+        }
+    }
+
+    li {
+        list-style-type: none;
+    }
+}
+
+/*
+    Scrollbar
+ */
+* {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #2b2b2b;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+        background: #2b2b2b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #5c5c5c;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #656565;
+    }
+}
+
+a.anchor::before {
+    content: "#";
+    display: inline-block;
+    color: #cdc343;
+    margin-right: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+code {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background: #14181c !important;
+    color: #c6c6c6 !important;
+}
+
+.openblock {
+    margin-top: 30px;
+
+    > .title {
+        display: flex;
+        align-items: center;
+        color: #eaeaea;
+        font-style: normal;
+        font-weight: 600;
+        padding-bottom: 4px;
+        font-family: "JetBrains Mono", sans-serif !important;
+        border-bottom: 1px solid #eaeaea;
+
+        &::before {
+            content: "";
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            border-radius: 8px;
+            background: #eaeaea;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+
+    > .content {
+        margin-left: 8px;
+    }
+
+    &.function {
+        > .title {
+            border-bottom: 1px solid var(--function-color);
+        }
+
+        > .title::before {
+            content: "F";
+            background: var(--function-color);
+            /*background-image: url("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://github.com&size=512");*/
+        }
+    }
+
+    &.method {
+        > .title {
+            border-bottom: 1px solid var(--method-color);
+        }
+
+        > .title::before {
+            content: "M";
+            background: var(--method-color);
+            /*background-image: url("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://github.com&size=512");*/
+        }
+    }
+}
+
+.sect2 {
+    .openblock {
+        margin-left: 10px;
+    }
+}
+
+.admonitionblock {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+
+    &.note {
+        background: #283c28;
+    }
+
+    .icon > img {
+        filter: invert(0.8);
+        width: 32px;
+    }
+
+    .content {
+        padding-left: 10px;
+        color: #c5c5c5;
+    }
+}
+
+.CodeRay {
+    background: #14181c;
+    line-height: 1.4;
+
+    .line-numbers {
+        margin-right: 10px;
+        color: #6a6a6a;
+    }
+
+    .keyword {
+        color: #ffad2a;
+        font-weight: 600;
+    }
+
+    .local-variable {
+        color: #8db4ec;
+    }
+
+    .integer {
+        color: #ff4141;
+    }
+}
+
+#toc {
+    background: #14181c;
+    overflow-y: scroll;
+
+    a {
+        color: #eaeaea;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}

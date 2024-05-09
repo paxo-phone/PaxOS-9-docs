@@ -1,0 +1,18 @@
+= API Reference
+:toc: left
+:toc-title:
+:toclevels: 5
+:stylesdir: styles
+:stylesheet: stylesheet.css
+:coderay-linenums-mode: inline
+:coderay-css: class
+:docinfo: shared,private-footer
+:docinfodir: common/meta
+:docinfo: shared
+:noheader:
+:nofooter:
+:icons:
+:iconsdir: images/icons
+:sectanchors:
+
+include::api-reference/gui.adoc[]

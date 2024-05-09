@@ -1,0 +1,33 @@
+=== gui.window
+
+--
+This is the main element of every application.
+It's the container of every element.
+
+[%linenums,lua]
+----
+local win = gui:window()
+
+gui:setWindow(win)
+----
+--
+
+[.function]
+.gui:window()
+--
+Create a new window.
+
+NOTE: Don't forget to add your window.
+--
+
+[.function]
+.gui:window()
+--
+Create a new window.
+--
+
+[.function]
+.gui:window()
+--
+Create a new window.
+--
