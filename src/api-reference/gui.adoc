@@ -1,5 +1,6 @@
 == GUI
 
+[.description]
 --
 The GUI library is used to manage everything that is shown on screen.
 --
@@ -18,5 +19,6 @@ Set the active window.
 Creates a new element.
 --
 
+include::gui.widget.adoc[]
 include::gui.window.adoc[]
 include::gui.canvas.adoc[]

@@ -1,0 +1,118 @@
+=== gui.widget
+
+[.description]
+--
+This is the base for every GUI element.
+
+NOTE: ``gui.widget`` (Lua) is the equivalent of ``ElementBase`` (C++).
+--
+
+[.method]
+.gui.widget:setX(x)
+--
+Set the widget's x.
+--
+
+[.method]
+.gui.widget:setY(x)
+--
+Set the widget's y.
+--
+
+[.method]
+.gui.widget:setWidth(width)
+--
+Set the widget's width.
+--
+
+[.method]
+.gui.widget:setHeight(height)
+--
+Set the widget's height.
+--
+
+[.method]
+.gui.widget:getX()
+--
+Get the widget's x.
+--
+
+[.method]
+.gui.widget:getY()
+--
+Get the widget's y.
+--
+
+[.method]
+.gui.widget:getWidth()
+--
+Get the widget's width.
+--
+
+[.method]
+.gui.widget:getHeight()
+--
+Get the widget's height.
+--
+
+[.method]
+.gui.widget:setBackgroundColor(color)
+--
+Set the widget's background color.
+--
+
+[.method]
+.gui.widget:enable()
+--
+Enable the widget.
+--
+
+[.method]
+.gui.widget:disable()
+--
+Disable the widget.
+--
+
+[.method]
+.gui.widget:isTouched()
+--
+Get the widget touched/focused state.
+--
+
+[.method]
+.gui.widget:onClick(callback)
+--
+Set the widget's "onClick" callback.
+--
+
+[.method]
+.gui.widget:onScrollUp(callback)
+--
+Set the widget's "onScrollUp" callback.
+--
+
+[.method]
+.gui.widget:onScrollDown(callback)
+--
+Set the widget's "onScrollDown" callback.
+--
+
+[.method]
+.gui.widget:onScrollRight(callback)
+--
+Set the widget's "onScrollRight" callback.
+--
+
+[.method]
+.gui.widget:onScrollLeft(callback)
+--
+Set the widget's "onScrollLeft" callback.
+--
+
+[.method]
+.gui.widget:update()
+--
+Update the widget.
+
+WARNING: Unknown behavior.
+--

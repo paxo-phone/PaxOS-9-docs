@@ -1,6 +1,6 @@
 = API Reference
 :toc: left
-:toc-title:
+:toc-title: API Reference
 :toclevels: 5
 :stylesdir: styles
 :stylesheet: stylesheet.css
@@ -9,8 +9,6 @@
 :docinfo: shared,private-footer
 :docinfodir: common/meta
 :docinfo: shared
-:noheader:
-:nofooter:
 :icons:
 :iconsdir: images/icons
 :sectanchors:

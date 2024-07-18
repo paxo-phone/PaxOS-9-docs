@@ -33,8 +33,20 @@ header {
     }
 }
 
-#content {
+#header {
     margin-top: 100px;
+    margin-left: 320px;
+}
+
+#footer {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 320px;
+    text-align: center;
+}
+
+#content {
+    margin-top: 50px;
     margin-left: 320px;
     padding-left: 40px;
     padding-right: 80px;
@@ -150,24 +162,44 @@ code {
     &.function {
         > .title {
             border-bottom: 1px solid var(--function-color);
-        }
 
-        > .title::before {
-            content: "F";
-            background: var(--function-color);
-            /*background-image: url("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://github.com&size=512");*/
+            &::before {
+                content: "F";
+                background: var(--function-color);
+                /*background-image: url("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://github.com&size=512");*/
+            }
         }
     }
 
     &.method {
         > .title {
             border-bottom: 1px solid var(--method-color);
-        }
 
-        > .title::before {
-            content: "M";
-            background: var(--method-color);
-            /*background-image: url("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://github.com&size=512");*/
+            &::before {
+                content: "M";
+                background: var(--method-color);
+                /*background-image: url("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://github.com&size=512");*/
+            }
+        }
+    }
+
+    &.inherits {
+        margin-top: 0;
+        background: #282e3c;
+        border-radius: 10px;
+        padding: 10px;
+
+        .paragraph {
+            p {
+                margin: 0;
+
+                &::before {
+                    content: "Inherits :";
+                    display: inline-block;
+                    margin-right: 10px;
+                    font-weight: 600;
+                }
+            }
         }
     }
 }
@@ -185,6 +217,10 @@ code {
 
     &.note {
         background: #283c28;
+    }
+
+    &.warning {
+        background: #3c2828;
     }
 
     .icon > img {

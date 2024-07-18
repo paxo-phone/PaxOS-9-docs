@@ -1,14 +1,26 @@
 === gui.window
 
+[.inherits]
+--
+gui.widget
+--
+
+[.description]
 --
 This is the main element of every application.
 It's the container of every element.
 
 [%linenums,lua]
 ----
-local win = gui:window()
+-- Usage
 
-gui:setWindow(win)
+local win = gui:window()  -- Create a new window
+
+--[[
+Your code
+--]]
+
+gui:setWindow(win)  -- Set as active window
 ----
 --
 
@@ -17,17 +29,5 @@ gui:setWindow(win)
 --
 Create a new window.
 
-NOTE: Don't forget to add your window.
---
-
-[.function]
-.gui:window()
---
-Create a new window.
---
-
-[.function]
-.gui:window()
---
-Create a new window.
+NOTE: Don't forget to set your window as active using ``gui:setWindow(window)``.
 --

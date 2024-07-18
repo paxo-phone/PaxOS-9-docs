@@ -1,24 +1,122 @@
 === gui.canvas
 
+[.inherits]
 --
-Canvas is used for directly access C++ draw functions from the graphical library.
-Its main use is for graphics intensive applications like games.
+gui.widget
+--
+
+[.description]
+--
+Canvas is used for fast graphically intensive application.
+Its main use is for applications like games.
 --
 
 [.function]
-.gui:window()
+.gui:canvas(x, y, width, height)
 --
-Create a new window.
---
-
-[.function]
-.gui:window()
---
-Create a new window.
+Create a new canvas at the given position with the given size.
 --
 
-[.function]
-.gui:window()
+[.method]
+.gui.canvas:setPixel(x, y, color)
 --
-Create a new window.
+Set the pixel at the given position to the given color.
+--
+
+[.method]
+.gui.canvas:drawRect(x, y, w, h, color)
+--
+Draw a rect at the given position with the given size and color.
+--
+
+[.method]
+.gui.canvas:fillRect(x, y, w, h, color)
+--
+Fill a rect at the given position with the given size and color.
+--
+
+[.method]
+.gui.canvas:drawCircle(x, y, radius, color)
+--
+Draw a circle at the given position with the given radius and color.
+--
+
+[.method]
+.gui.canvas:fillCircle(x, y, radius, color)
+--
+Fill a circle at the given position with the given radius and color.
+--
+
+[.method]
+.gui.canvas:drawRoundRect(x, y, w, h, radius, color)
+--
+Draw a rounded rect at the given position with the given size, color and radius.
+--
+
+[.method]
+.gui.canvas:drawRoundRect(x, y, w, h, radius, color)
+--
+Fill a rounded rect at the given position with the given size, color and radius.
+--
+
+[.method]
+.gui.canvas:drawPolygon(vertices, color)
+--
+Draw a polygon with the given table of vertices and the given color.
+--
+
+[.method]
+.gui.canvas:fillPolygon(vertices, color)
+--
+Fill a polygon with the given table of vertices and the given color.
+--
+
+[.method]
+.gui.canvas:drawLine(x1, y1, x2, y2, color)
+--
+Draw a line between (x1, y1) and (x2, y2) with the given color.
+--
+
+[.method]
+.gui.canvas:drawText(x, y, text, color)
+--
+Draw the given text at the given position with the given color.
+--
+
+[.method]
+.gui.canvas:drawTextCentered(x, y, text, color, horizontallyCentered, verticallyCentered)
+--
+Draw the given text at the given position with the given color. +
+If ``horizontallyCentered`` is ``true``, the text will be centered horizontally. +
+If ``verticallyCentered`` is ``true``, the text will be centered vertically.
+--
+
+[.method]
+.gui.canvas:drawTextCenteredInRect(x, y, w, h, text, color, horizontallyCentered, verticallyCentered)
+--
+Draw the given text at the given position and in the given bounding box size with the given color. +
+If ``horizontallyCentered`` is ``true``, the text will be centered horizontally. +
+If ``verticallyCentered`` is ``true``, the text will be centered vertically.
+
+NOTE: ``w`` and ``h`` are the width and the height of the text's bounding box.
+--
+
+[.method]
+.gui.canvas:onTouch(callback)
+--
+Set the canvas's "onTouch" callback.
+--
+
+[.method]
+.gui.canvas:getTouch()
+--
+Return a table containing every touch points.
+--
+
+[.method]
+.gui.widget:specificUpdate()
+--
+Unknown.
+
+WARNING: Unknown behavior.
 --
