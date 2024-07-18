@@ -116,6 +116,10 @@ h2 {
 
 h3 {
     font-size: 22px;
+
+    border-top: 1px solid #5c5c5c;
+    margin-top: 30px;
+    padding-top: 20px;
 }
 
 code {
@@ -235,25 +239,45 @@ code {
 }
 
 .CodeRay {
-    background: #14181c;
+    background: none !important;
     line-height: 1.4;
+    border-radius: 10px;
+
+    > code {
+        width: 100%;
+    }
 
     .line-numbers {
-        margin-right: 10px;
-        color: #6a6a6a;
+        margin-right: 10px !important;
+        color: #6a6a6a !important;
     }
 
     .keyword {
-        color: #ffad2a;
-        font-weight: 600;
+        color: #ffad2a !important;
+        font-weight: 600 !important;
     }
 
     .local-variable {
-        color: #8db4ec;
+        color: #8db4ec !important;
     }
 
     .integer {
-        color: #ff4141;
+        color: #ff4141 !important;
+    }
+
+    .comment {
+        color: #6a6a6a !important;
+        font-style: italic !important;
+
+        > .delimiter {
+            color: #6a6a6a !important;
+            font-style: italic !important;
+        }
+
+        > .content {
+            color: #6a6a6a !important;
+            font-style: italic !important;
+        }
     }
 }
 

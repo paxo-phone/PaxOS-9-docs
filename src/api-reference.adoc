@@ -4,6 +4,7 @@
 :toclevels: 5
 :stylesdir: styles
 :stylesheet: stylesheet.css
+:source-highlighter: coderay
 :coderay-linenums-mode: inline
 :coderay-css: class
 :docinfo: shared,private-footer

@@ -11,6 +11,14 @@ IF %ERRORLEVEL% NEQ 0 (
     GOTO :eof
 )
 
+:: Check if coderay is installed
+WHERE /q coderay
+IF %ERRORLEVEL% NEQ 0 (
+    ECHO Error : CodeRay is not installed !
+    TIMEOUT /t 2 /nobreak > nul
+    GOTO :eof
+)
+
 :: Clear previous build
 IF EXIST output (
     RMDIR /s /q output
