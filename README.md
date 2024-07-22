@@ -14,7 +14,13 @@ Converted using [Asciidoctor](https://asciidoctor.org/).
 
 #### Windows
 
-Use ``build.bat`` to convert the source to HTML.
+Use ``build.bat`` to convert the source to HTML.\
+Use :
+```powershell
+.\build.bat
+```
+> [!NOTE]
+> You need to have [asciidoctor](https://docs.asciidoctor.org/asciidoctor/latest/install/windows/) and [coderay](https://docs.asciidoctor.org/asciidoctor/latest/syntax-highlighting/coderay/) installed.
 
 #### Linux
 
