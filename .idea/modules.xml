@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PaxOS-9.iml" filepath="$PROJECT_DIR$/PaxOS-9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PaxOS-9-docs.iml" filepath="$PROJECT_DIR$/PaxOS-9-docs.iml" />
     </modules>
   </component>
 </project>
