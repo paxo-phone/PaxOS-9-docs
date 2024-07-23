@@ -3,9 +3,34 @@
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
+@media only screen and (max-width: 1200px){
+    #toc {
+        width: 200px !important;
+    }
+
+    #content {
+        margin-left: 220px !important;
+        padding-right: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #toc {
+        display: none !important;
+    }
+
+    #content {
+        margin-left: 0 !important;
+    }
+}
+
 :root {
     --function-color: #229f24;
     --method-color: #4981ca;
+}
+
+*::before {
+    z-index: -1;
 }
 
 body {
@@ -142,6 +167,7 @@ code {
         padding-bottom: 4px;
         font-family: "JetBrains Mono", sans-serif !important;
         border-bottom: 1px solid #eaeaea;
+        overflow-wrap: anywhere;
 
         &::before {
             content: "";
@@ -243,9 +269,10 @@ code {
     background: none !important;
     line-height: 1.4;
     border-radius: 10px;
+    overflow-x: auto;
 
     > code {
-        width: 100%;
+        width: calc(100% - 20px);
     }
 
     .line-numbers {
@@ -284,7 +311,7 @@ code {
 
 #toc {
     background: #14181c;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     a {
         color: #eaeaea;
