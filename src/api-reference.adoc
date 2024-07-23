@@ -14,5 +14,87 @@
 :iconsdir: images/icons
 :sectanchors:
 
+++++
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(() => {
+    // Smooth scroll to a jQuery selector
+    const scrollTo = ((elementId) => {
+        const target = $(elementId); // Get target element of link
+
+        const topOffset = target.offset().top; // Get element scroll Y
+        const height = target.height(); // Get element height
+        const marginTop = parseFloat(target.css("margin-top")); // Get element top margin
+        const paddingTop = parseFloat(target.css("padding-top")); // Get element top padding
+
+        $("html, body").animate({
+            scrollTop: (topOffset - height - marginTop + paddingTop) + "px"
+        }, 1000);
+    });
+
+    // Copy value to clipboard
+    const copyToClipboard = ((value) => {
+        navigator.clipboard.writeText(value);
+    });
+
+    // Show a notification in the bottom-right corner of the screen
+    const showNotification = ((text) => {
+        const element = $("<div class='notification'></div>");
+        element.text(text);
+
+        $("body").append(element);
+
+        const height = element.height();
+
+        element.css("bottom", "-" + (height * 2) + "px");
+
+        element.animate({
+            bottom: "10px"
+        }, 400, "swing", () => {
+            // Remove after timeout
+            setTimeout(() => {
+                element.animate({
+                    bottom: "-" + (height * 2) + "px",
+                }, 400, "swing", () => {
+                    element.remove();
+                });
+            }, 2000);
+        });
+    });
+
+    // Overwrite "#" links scrolling, for URLs
+    $(window).on("hashchange", () => {
+        const hash = window.location.hash; // Get element hash in URL
+
+        scrollTo(hash);
+    });
+
+    // Overwrite "#" links scrolling, for "a" elements
+    $("a").on("click", (e) => {
+        // Do not apply for anchors
+        if (e.target.classList.contains("anchor")) {
+            return;
+        }
+
+        const href = e.target.getAttribute("href"); // Get clicked link
+
+        window.history.replaceState({}, "", href); // Change URL without reloading page
+
+        scrollTo(href);
+
+        e.preventDefault();
+    });
+
+    // Make anchors ("#") links copy URL to clipboard
+    $(".anchor").on("click", (e) => {
+        copyToClipboard(e.target.href);
+        showNotification("Copied link to clipboard !");
+
+        e.preventDefault();
+    });
+});
+</script>
+++++
+
 include::api-reference/getting-started.adoc[]
 include::api-reference/gui.adoc[]

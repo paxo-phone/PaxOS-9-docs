@@ -322,3 +322,13 @@ code {
         text-decoration: underline;
     }
 }
+
+.notification {
+    position: fixed;
+    right: 10px;
+    padding: 10px;
+    background: #14181c;
+    box-shadow: 0 0 20px 0 #000000;
+    border: 1px solid #cdc343;
+    border-radius: 10px;
+}
